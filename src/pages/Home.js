@@ -12,12 +12,12 @@ export default function Home() {
   }, []);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:8080/user");
+    const result = await axios.get("http://35.246.224.234:8080/user");
     setUsers(result.data);
   };
 
   const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:8080/user/${id}`);
+    await axios.delete(`http://35.246.224.234:8080/user/${id}`);
     loadUsers();
   };
 
